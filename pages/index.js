@@ -7,9 +7,7 @@ function Home(){
             <center>
                 <h1>Home</h1>
                 <h3>Contador</h3>
-                <Link href="/sobre">
-                <a>Acessar página Sobre </a>
-                </Link>
+                <Link href="/sobre" > Acessar página Sobre </Link>
                 <Contador />
              </center>
         </div>
