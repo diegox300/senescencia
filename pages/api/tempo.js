@@ -1,7 +1,9 @@
 async function tempo (request, response) {
+
+    const apiSecret = process.env.CONVERTKIT_API_SECRET;
     const dynamicDate = new Date();
 
-    const subscribersResponse = await fetch("https://api.convertkit.com/v3/subscribers?api_secret=J2BF-fvV6e6U3luIDKktpM0Bw_wHC_jDg_bUekFLW00");
+    const subscribersResponse = await fetch(`https://api.convertkit.com/v3/subscribers?api_secret=${apiSecret}`);
     const subscribersResponseJson = await subscribersResponse.json();
     const inscritos = subscribersResponseJson.total_subscribers;
 
